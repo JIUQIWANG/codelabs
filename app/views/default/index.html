@@ -127,7 +127,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
           </paper-input-container>
         </div>
-        <a href="github.com/iotexproject/codelabs" id="sm-icon">
+        <a href="https://github.com/iotexproject/codelabs" id="sm-icon">
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>GitHub icon</title>
             <path
@@ -149,7 +149,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             Codelabs provide a guided, tutorial, hands-on
             coding experience for IoTeX developers. Most codelabs will step you through the process
             of building a small application, or adding a new feature to an
-            existing application.
+            existing application. They cover a wide range of topics such as Node Operation, Smart Contracts, dApps, and
+            more.
             <!-- <br>
             <a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a> -->
           </p>
@@ -178,7 +179,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
 
         {% if view.id == 'default' %}
-        <paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
+        <!-- <paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
           <paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content">
             {%- for view in views -%}
             {%- if view.id != 'default' && !view.hidden -%}
@@ -188,7 +189,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             {%- endif -%}
             {%- endfor %}
           </paper-listbox>
-        </paper-dropdown-menu>
+        </paper-dropdown-menu> -->
         {% endif %}
 
         {%- if showcats -%}
