@@ -5,7 +5,7 @@ export PATH="./node_modules/.bin/:$PATH"
 set -e
 
 # build
-gulp build
+gulp build --codelabs-dir codelabs
 
 # copy codelabs folder to build
 rm -r build/codelabs
@@ -15,7 +15,7 @@ cp -r codelabs/ build/codelabs
 cd ./build
 
 # redirect CNAME
-echo 'codelabs.iotexconnect.io' > CNAME
+echo 'codelabs.iotex.io' > CNAME
 
 git init
 git add -A

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>IoTeX Codelab: Deploying a simple smart contract</title>
+  <title>Deploying a simple smart contract</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,12 +23,12 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="deploy-smart-contract"
-                  title="IoTeX Codelab: Deploying a simple smart contract"
+                  title="Deploying a simple smart contract"
                   environment="web"
-                  feedback-link="github.com">
+                  feedback-link="https://github.com/iotexproject/codelabs/issues">
     
       <google-codelab-step label="Overview" duration="0">
-        <p><strong>Last Updated:</strong> 2019-07-22</p>
+        <p><strong>Last Updated:</strong> 2019-07-23</p>
 <p>This codelab serves as a comprehensive step-by-step guide on how to deploy a smart contract on the IoTeX network! We will be creating a simple ERC20 token called BasicToken and deploying it on MainNet Alpha.</p>
 <h2 is-upgraded><strong>What is a smart contract?</strong></h2>
 <p>&#34;Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code. The code and the agreements contained therein exist across a distributed, decentralized blockchain network&#34; - Investopedia</p>
@@ -52,7 +52,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Getting Started" duration="0">
+      <google-codelab-step label="Getting Started" duration="5">
         <h3 is-upgraded>Install node/npm</h3>
 <p>Download and install <a href="https://nodejs.org/en/" target="_blank">node</a> and <a href="https://www.npmjs.com/get-npm" target="_blank">npm</a> from NodeJS website. We will need npm (Node Package Manager) to help with managing dependencies and utilizing Open-Zeppelin, a library for smart contract development.</p>
 <p>Verify your installation:</p>
@@ -67,7 +67,7 @@ $ npm -v</pre>
 
       </google-codelab-step>
     
-      <google-codelab-step label="Creating the environment" duration="0">
+      <google-codelab-step label="Creating the environment" duration="3">
         <p>To begin, make a new directory and initialize an empty truffle project. This will be the environment we work in to build smart contracts.</p>
 <pre>$ mkdir BasicToken
 $ cd BasicToken
@@ -80,7 +80,7 @@ $ truffle init</pre>
 
       </google-codelab-step>
     
-      <google-codelab-step label="Writing your Contract" duration="0">
+      <google-codelab-step label="Writing your Contract" duration="5">
         <p>We will now begin writing our smart contract!</p>
 <p>Through the <code>truffle init</code> command, a new contracts folder should have been created. Add a new solidity file to the contracts folder and open it in the code editor of your choice.</p>
 <p>All solidity contracts begin with the version definition (0.5.0 is the latest version):</p>
@@ -88,7 +88,7 @@ $ truffle init</pre>
 <p>Now import the OpenZeppelin ERC20 class that we will be inheriting from:</p>
 <pre><code>import &#34;../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol&#34;;</code></pre>
 <p>We can now define our new smart contract. In this example, we will call it BasicToken: </p>
-<h3 is-upgraded><a href="https://github.com/JChouCode/iotex-smart-contract" target="_blank">Download code</a></h3>
+<h3 is-upgraded><a href="https://github.com/iotexproject/codelabs/blob/master/contracts/contract.sol" target="_blank">View code</a></h3>
 <pre><code>contract BasicToken is ERC20 {
    string public constant name = &#34;BasicToken&#34;;
    string public constant symbol = &#34;BT&#34;;
@@ -112,7 +112,7 @@ $ truffle init</pre>
 
       </google-codelab-step>
     
-      <google-codelab-step label="Compiling your Contract" duration="0">
+      <google-codelab-step label="Compiling your Contract" duration="5">
         <p>To compile our contract, we are going to use Truffle. Truffle automatically compiles all <code>.sol</code> files we have in our contracts folder and builds them in the <code>build/contracts</code> directory.</p>
 <p>Call truffle compile:</p>
 <pre>$ truffle compile</pre>
@@ -144,7 +144,7 @@ contracts</pre>
 
       </google-codelab-step>
     
-      <google-codelab-step label="Deploying your Contract" duration="0">
+      <google-codelab-step label="Deploying your Contract" duration="5">
         <p>To deploy our BasicToken, we should visit <a href="http://iotexscan.io/wallet" target="_blank">iotexscan.io/wallet</a>, to deploy on MainNet, or <a href="https://testnet.iotexscan.io/wallet" target="_blank">testnet.iotexscan.io/wallet</a>, to deploy on TestNet. In this example, we will be deploying on MainNet, but regardless, the steps should be identical.</p>
 <aside class="warning"><p><strong>Important</strong>: Deploying a smart contract requires some IOTX as a gas fee. Please make sure you have at least 1 IOTX before continuing.</p>
 </aside>
@@ -172,7 +172,7 @@ contracts</pre>
 
       </google-codelab-step>
     
-      <google-codelab-step label="Interacting with your Contract" duration="0">
+      <google-codelab-step label="Interacting with your Contract" duration="5">
         <p>Hurray! You just deployed your first contract. Now we can interact with our contract and see how it works. </p>
 <p>Go back to <a href="http://iotex-scan.io/wallet" target="_blank">iotex-scan.io/wallet</a> or <a href="https://testnet.iotexscan.io/wallet" target="_blank">testnet.iotexscan.io/wallet</a>, if you deployed on Testnet, but this time select interact with smart contract:</p>
 <p class="image-container"><img style="width: 624.00px" src="img/17c4eb2fbd2144a3.png"></p>

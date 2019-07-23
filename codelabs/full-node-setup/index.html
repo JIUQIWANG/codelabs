@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>IoTeX Codelab: Delegate Node Setup</title>
+  <title>Setting up a full node</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,17 +23,15 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="full-node-setup"
-                  title="IoTeX Codelab: Delegate Node Setup"
+                  title="Setting up a full node"
                   environment="web"
-                  feedback-link="github.com">
+                  feedback-link="https://github.com/iotexproject/codelabs/issues">
     
       <google-codelab-step label="Overview" duration="0">
-        <p><strong>Last Updated:</strong> 2019-07-12</p>
+        <p><strong>Last Updated:</strong> 2019-07-23</p>
 <p>This codelab serves as a comprehensive step-by-step guide on how to set up a full node for delegates on either IoTeX Mainnet alpha or Testnet. </p>
-<h2 is-upgraded><strong>What is a delegate node?</strong></h2>
-<p>A delegate node is a full node that interacts with the IoTeX blockchain network.</p>
-<h2 is-upgraded><strong>Why are they important?</strong></h2>
-<p>Delegates are essential to IoTeX ecosystem. They serve as a representatives of the whole IoTeX community and are vital to the Roll-DPoS consensus mechanism.</p>
+<h2 is-upgraded><strong>What is a full node?</strong></h2>
+<p>Full nodes are devices that support the IoTeX network by maintaining a full copy of our blockchain. Full nodes can help to validate transactions, accept transactions, and communicate with other nodes.</p>
 <h2 class="checklist" is-upgraded><strong>What you&#39;ll learn</strong></h2>
 <ul class="checklist">
 <li>How to set up a full node on either Mainnet Alpha or Testnet</li>
@@ -46,8 +44,6 @@
 <li>Machine to host node</li>
 <li>Basic knowledge of how to operate terminal</li>
 </ul>
-<aside class="special"><p>See our next <a href="http://google.com" target="_blank">guide</a> about deploying a simple smart contract if you have already set up your node!</p>
-</aside>
 
 
       </google-codelab-step>
@@ -98,7 +94,7 @@ endpoint is set to api.iotex.one:443</pre>
 
       </google-codelab-step>
     
-      <google-codelab-step label="Creating an account" duration="5">
+      <google-codelab-step label="Creating an account" duration="2">
         <aside class="special"><p>If you already have an account, skip to the next section</p>
 </aside>
 <h2 is-upgraded><strong>Make account</strong></h2>
@@ -255,7 +251,7 @@ chain:
 
       </google-codelab-step>
     
-      <google-codelab-step label="Operating your node" duration="5">
+      <google-codelab-step label="Operating your node" duration="2">
         <p>You can verify that your node is working by fetching the logs of the container</p>
 <pre>$ docker logs iotex</pre>
 <p>The logs can be filtered using </p>
